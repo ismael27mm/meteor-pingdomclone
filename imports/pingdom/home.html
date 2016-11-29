@@ -1,0 +1,61 @@
+<template name="home">
+
+
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+
+		<div class="page-header">
+			<h3>Bienvenido</h3>
+		</div>
+
+		<form class="new-server">
+		<div class="panel panel-default">
+			<div class="panel-heading">Agregar servidor</div>
+			<div class="panel-body">
+				
+				<div class="col-xs-4">
+					<input class="form-control server-name" type="text" placeholder="Servidor" />
+				</div>
+
+				<div class="col-xs-4">
+					<input class="form-control server-ip" type="text" placeholder="IP" />
+				</div>
+
+				<div class="col-xs-4">
+					<button type="submit" class="btn btn-primary pull-right">Agregar</button>
+				</div>
+
+			</div>
+		</div>
+		</form>
+
+		<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Dirección</th>
+				<th>Uptime</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each servers}}
+        		{{> server}}
+      		{{/each}}
+		</tbody>
+		</table>
+
+	</div>
+</div>
+
+
+</template>
+
+<template name="server">
+<tr>
+	<td>{{name}}</td>
+	<td>{{ip}}</td>
+	<td>{{ percent }}% ({{up}}/{{down}})</td>
+	<td><button type="button" class="btn btn-danger delete" data-ip="{{ip}}">X</button></td>
+</tr>
+</template>

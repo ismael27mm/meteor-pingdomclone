@@ -1,0 +1,40 @@
+<template name="signup">
+{{#if currentUser}}
+
+  {{> mustlogout}}
+
+{{else}}
+<div class="row">
+  <div class="col-sm-4 col-sm-offset-4"><h4 class="login-title">PONGDOM CLONE</h4></div>
+
+  <div class="col-sm-4 col-sm-offset-4">
+  {{> sAlert}}
+
+  <form class="sign-up-form form">
+
+    <div class="panel panel-primary">
+        <div class="panel panel-heading">Crear cuenta</div>
+        <div class="panel-body">
+
+          <div class="form-group"> 
+          <label class="control-label">Correo</label> 
+            <input class="form-control email-address-input" type="text">
+          </div>
+          <div class="form-group"> 
+          <label class="control-label">Contraseña</label>
+            <input class="form-control password-input" type="password">
+          </div>
+
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-primary" type="submit">Registrarme</button>
+
+          <div class="pull-right"><a href="{{pathFor 'Login'}}">Iniciar sesión</a></div>
+        </div>
+    </div>
+  </form>
+
+  </div>
+</div>
+{{/if}}
+</template>
