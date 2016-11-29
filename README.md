@@ -1,6 +1,6 @@
 # meteor-pingdomclone
-<p>Pingdome clone to test meteor capabilities
-Simple instructions:</p>
+<p>Pingdome clone to test meteor capabilities</p>
+<h3>Simple instructions:</h3>
 <ul>
 <li>Install meteor (locally, in docker container, amazon aws, digitalocean, or whatever you want)</li>
 <li>Clone or download the zip</li>
